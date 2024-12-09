@@ -681,9 +681,9 @@ main.drake-main {
 }
 .left-sidebar .sidebar-header {
     margin-bottom: 65px;
+    text-align: center;
 }
 .left-sidebar .sidebar-header .designation {
-    max-width: 110px;
     text-align: right;
     color: #fff;
     font-size: 14px;
@@ -929,6 +929,7 @@ body .body-overlay {
     padding-bottom: 90px;
 }
 .services-items .service-item {
+    display: block;
     border: 1px solid #565656;
     border-radius: 20px;
     transition: .3s;
