@@ -28,9 +28,9 @@
 </head>
 <body class="home1-page">
 
-   <!--  <video class="body-overlay" muted autoplay loop>
+    <video class="body-overlay" muted autoplay loop>
         <source src="./assets/images/video1.mp4" type="video/mp4">
-    </video> -->
+    </video>
 
     <!-- Preloader -->
     <div class="page-loader">
@@ -66,12 +66,12 @@
                     </li>
                     <li>
                         <a class="scroll-to" href="#portfolio">
-                            <i class="las la-grip-vertical"></i> <span>Portfolios</span>
+                            <i class="las la-grip-vertical"></i> <span>Portfolio</span>
                         </a>
                     </li>
                     <li>
                         <a class="scroll-to" href="#testimonial">
-                            <i class="lar la-comment"></i> <span>Testimonial</span>
+                            <i class="lar la-comment"></i> <span>Testimonials</span>
                         </a>
                     </li>
                     <li>
@@ -118,12 +118,12 @@
         </li>
         <li>
             <a class="scroll-to" href="#portfolio">
-                <span>Portfolios</span> <i class="las la-grip-vertical"></i>
+                <span>Portfolio</span> <i class="las la-grip-vertical"></i>
             </a>
         </li>
         <li>
             <a class="scroll-to" href="#testimonial">
-                <span>Testimonial</span> <i class="lar la-comment"></i>
+                <span>Testimonials</span> <i class="lar la-comment"></i>
             </a>
         </li>
         <li>
@@ -287,9 +287,6 @@
                                 <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/portfolio/websites/ferroport.jpg" data-lightbox="corporate" data-title="TESZT">
-                                                <img src="./assets/images/portfolio/websites/ferroport.jpg" alt="Portfolio">
-                                            </a>
                                             <a href="./assets/images/portfolio2.jpg" data-lightbox="corporate">
                                                 <img src="./assets/images/portfolio2.jpg" alt="Portfolio">
                                             </a>
@@ -382,7 +379,7 @@
                         <div class="testimonial-content content-width">
                             <div class="section-header">
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="lar la-comment"></i> testimonial
+                                    <i class="lar la-comment"></i> testimonials
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Long-Lasting <span>Partnerships</span></h1>
                             </div>
@@ -604,43 +601,35 @@
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Work <span>Together!</span></h1>
                             </div>
                             <h3 class="scroll-animation" data-animation="fade_from_bottom">hello@marcell.solutions</h3>
-                            <p id="required-msg">* Marked fields are required to fill.</p>
+                            
 
                             <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST" action="mailer.php">
-                                <div class="alert alert-success messenger-box-contact__msg" style="display: none" role="alert">
-                                    Your message was sent successfully.
-                                </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="input-group">
                                             <label for="full-name">full Name <sup>*</sup></label>
-                                            <input type="text" name="full-name" id="full-name" placeholder="Your Full Name">
+                                            <input type="text" name="full-name" id="full-name" placeholder="Your full name">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="input-group">
                                             <label for="email">Email <sup>*</sup></label>
-                                            <input type="email" name="email" id="email" placeholder="Your email adress">
+                                            <input type="email" name="email" id="email" placeholder="Your email address">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="input-group">
                                             <label for="message">message</label>
-                                            <textarea name="message" id="message" placeholder="Wrire your message here ..."></textarea>
+                                            <textarea name="message" id="message" placeholder="Write your message here ..."></textarea>
                                         </div>
                                     </div>
+                                  
                                     <div class="col-md-12">
-                                        <div class="input-group upload-attachment">
-                                            <div>
-                                                <label for="upload-attachment">
-                                                    <i class="las la-cloud-upload-alt"></i> add an attachment
-                                                    <input type="file" name="file" id="upload-attachment">
-                                                </label>                                                
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
+                                        <p id="required-msg">* Marked fields are required to fill.</p>
+                                        <div class="alert alert-success messenger-box-contact__msg" style="display: none" role="alert">
+                                    Your message was sent successfully.
+                                </div>
+                                
                                         <div class="input-group submit-btn-wrap">
                                             <button class="theme-btn" name="submit" type="submit" id="submit-form">send message</button>
                                         </div>
