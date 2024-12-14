@@ -1052,18 +1052,14 @@ body .body-overlay {
     bottom: 20px;
     left: 20px;
 }
-.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-categories li a {
+.portfolio-items .portfolio-item .portfolio-item-inner .portfolio-categories li span {
     display: block;
     font-size: 14px;
-    background: #fff;
-    color: #000;
+    background: #1f1f1f;
+    color: #fff;
     padding: 7px 20px;
     border-radius: 19px;
     transition: .3s;
-}
-.portfolio-items .portfolio-item:hover .portfolio-item-inner .portfolio-categories li a {
-    background: #1f1f1f;
-    color: #fff;
 }
 .portfolio-items .portfolio-item h2 {
     font-size: 24px;
