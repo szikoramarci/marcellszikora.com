@@ -1,35 +1,7 @@
 <?php
 
-require_once "Mail.php"; // Include the PEAR Mail package
-
-$headers = array(
-    'From' => 'test@ses.',
-    'To' => 'simabeats@gmail.com',
-    'Subject' => 'TTTT'
-);
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-
-$mail = Mail::factory("smtp", array(
-    'host' => 'marcell.solutions',
-    'port' => 465,
-    'auth' => true,
-    'username' => 'hello@marcell.solutions',
-    'password' => '6mH}YQL&5250'
-));
-
-// Send the email
-$result = $mail->send('simabeats@gmail.com', $headers, 'TESTT');
-var_dump($result);
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        # FIX: Replace this email with recipient email
-        $mail_to = "simabeats@gmail.com";
-        
         # Sender Data
         $name    = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["full-name"])));
         $email   = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -43,15 +15,25 @@ var_dump($result);
         }
         
         # Mail Content
-        $content = "Name: $name\n";
-        $content .= "Message:\n$message\n";
+        $content = "$name\n";
+        $content .= "$email\n";
+        $content .= "$message";
+        
+        include('Mail.php');
 
-        # email headers.
-        $headers = "From: $name <$email>";
-
-        # Send the email.
-        $success = mail($mail_to, 'New message from marcell.solutions', $content, $headers);
-        var_dump($success);
+        $recipients = 'simabeats@gmail.com';
+        
+        $headers['From']    = 'hello@marcell.solutions';
+        $headers['To']      = $recipients;
+        $headers['Subject'] = 'RFQ from marcell.solutions - '.date('Y-m-d H:i:s');
+        
+        $params['sendmail_path'] = '/usr/lib/sendmail';
+        
+        // Create the mail object using the Mail::factory method
+        $mail =& Mail::factory('sendmail', $params);
+        
+        $success = $mail->send($recipients, $headers, $content);
+        
         if ($success) {
             # Set a 200 (okay) response code.
             http_response_code(200);
