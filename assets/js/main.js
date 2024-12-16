@@ -36,28 +36,32 @@ $(function(){
             licenseKey: 'FJY9Y-84WUW-UNTPU-ZTBFG',
             selector: 'a',
             speed: 500,
-            plugins: [lgZoom, lgThumbnail]
+            plugins: [lgZoom, lgThumbnail],
+            mobileSettings: { showCloseIcon: true }
         });
 
         lightGallery(document.getElementById('admins'), {
             licenseKey: 'FJY9Y-84WUW-UNTPU-ZTBFG',
             selector: 'a',
             speed: 500,
-            plugins: [lgZoom, lgThumbnail]
+            plugins: [lgZoom, lgThumbnail],
+            mobileSettings: { showCloseIcon: true }
         });
 
         lightGallery(document.getElementById('ecommerce'), {
             licenseKey: 'FJY9Y-84WUW-UNTPU-ZTBFG',
             selector: 'a',
             speed: 500,
-            plugins: [lgZoom, lgThumbnail]
+            plugins: [lgZoom, lgThumbnail],
+            mobileSettings: { showCloseIcon: true }
         });
 
         lightGallery(document.getElementById('portals'), {
             licenseKey: 'FJY9Y-84WUW-UNTPU-ZTBFG',
             selector: 'a',
             speed: 500,
-            plugins: [lgZoom, lgThumbnail]
+            plugins: [lgZoom, lgThumbnail],
+            mobileSettings: { showCloseIcon: true }
         });
         
 
