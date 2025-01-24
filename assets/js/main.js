@@ -236,11 +236,23 @@ scroll_animations();
         }
         message.classList.remove('show');
 
-        form_data = $(this).serialize();
+        const formDataArray = $(this).serializeArray(); // Form mezők tömbként
+        const formDataObject = {};
+
+        // A formDataArray-t átalakítjuk egy kulcs-érték párokat tartalmazó objektummá
+        formDataArray.forEach(item => {
+            formDataObject[item.name] = item.value;
+        });
+
+        // JSON konvertálás
+        const jsonData = JSON.stringify(formDataObject);
+        console.log(formDataObject, jsonData)
+
         $.ajax({
             type: 'POST',
             url: form.attr('action'),
-            data: form_data
+            data: jsonData, // JSON adatok
+            contentType: 'application/json', // A tartalom típusa JSON
         })
         .done(done_func)
         .fail(fail_func);

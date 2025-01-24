@@ -86,6 +86,9 @@ ul {
     cursor: pointer;
     border: 2px solid var(--primary_color);
 }
+.theme-btn.small {
+    padding: 3px 20px 3px 20px;
+}
 .theme-btn i {
     font-size: 24px;
     margin-right: 10px;

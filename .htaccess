@@ -1,0 +1,13 @@
+# Átirányítás HTTPS-re, ha nem HTTPS-t használnak
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Átirányítás a www-ről a nem-www-re
+RewriteCond %{HTTP_HOST} ^www\.marcell\.solutions [NC]
+RewriteRule ^(.*)$ https://marcell.solutions/$1 [L,R=301]
+
+# Átirányítás minden más domainről (pl. http://marcell.solutions) a https://marcell.solutions-re
+RewriteCond %{HTTP_HOST} !^marcell\.solutions$ [NC]
+RewriteRule ^(.*)$ https://marcell.solutions/$1 [L,R=301]
+
+
